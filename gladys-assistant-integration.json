@@ -1,0 +1,51 @@
+{
+  "manifest_version": 1,
+  "type": "provider",
+  "name": "Dashboard Filler",
+  "description": {
+    "en": "An empty widget to keep the columns of your dashboards, even without widgets.",
+    "fr": "Un widget vide pour conserver les colonnes de vos tableaux de bord, même sans widget."
+  },
+  "version": "1.0.0",
+  "docker_image": "ghcr.io/philippema/glady-dashboard-filler:1.0.0",
+  "gladys_version": ">=5.1.0",
+  "cover_image": "https://raw.githubusercontent.com/PhilippeMA/glady-dashboard-filler/main/cover.png",
+  "categories": ["services"],
+  "widgets": [
+    {
+      "key": "spacer",
+      "label": { "en": "Empty space", "fr": "Espace vide" },
+      "description": {
+        "en": "A blank card that keeps an otherwise empty dashboard column.",
+        "fr": "Une carte vide qui conserve une colonne de tableau de bord sans widget."
+      },
+      "icon": "square",
+      "settings": [
+        {
+          "key": "height",
+          "type": "number",
+          "label": { "en": "Height (in lines)", "fr": "Hauteur (en lignes)" },
+          "description": {
+            "en": "Height of the blank area of the card, in lines of text.",
+            "fr": "Hauteur de la zone vide de la carte, en lignes de texte."
+          },
+          "required": false,
+          "default": 1,
+          "min": 1,
+          "max": 20
+        },
+        {
+          "key": "text",
+          "type": "string",
+          "label": { "en": "Text (optional)", "fr": "Texte (optionnel)" },
+          "description": {
+            "en": "Shown in the card. Leave empty for a blank card.",
+            "fr": "Affiché dans la carte. Laissez vide pour une carte vierge."
+          },
+          "placeholder": { "en": "e.g. Coming soon", "fr": "ex. Bientôt ici" },
+          "required": false
+        }
+      ]
+    }
+  ]
+}
